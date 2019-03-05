@@ -4,9 +4,11 @@ import hashlib
 import time, threading
 import json
 import secret
+import sys
 
-
-data='{"roomId":11342412}'
+room = sys.argv[1]  #接受命令行参数
+t = time.strftime("%Y%m%d-%H%M%S", time.localtime())
+data='{"roomId":%s}'%(room)
 appId=secret.appId
 key=secret.key
 
@@ -38,7 +40,7 @@ def recv1():
 	while True:
 		try:
 			dic = socket.recv().encode('utf-8')#接收消息转变编码为utf-8
-			with open("./danmu.json", "ab+") as f:#存储弹幕原始数据
+			with open("./%sdanmu.json"%(t), "ab+") as f:#存储弹幕原始数据
 				f.write(dic)
 			js = json.loads(dic)#字符串转字典
 			#print(js)

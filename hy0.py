@@ -1,5 +1,5 @@
 # -*- coding: UTF-8 -*-
-from websocket import create_connection
+from websocket import create_connection #模块名为websocket_client
 import hashlib
 import time, threading
 import json

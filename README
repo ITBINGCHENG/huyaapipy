@@ -1,3 +1,4 @@
 python 搭建 ws客户端利用虎牙api弹幕接口开发弹幕功能
 2019年3月5日
 hy.py 要从命令行接受房间号参数222
+secret 有两个参数 appId  key（secretId）

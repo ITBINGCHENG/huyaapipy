@@ -47,7 +47,7 @@ def recv1():
 			print(e)
 			socket = sock()
 			continue
-	f.close()
+	#f.close()
 
 
 socket = sock()
